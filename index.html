@@ -1,0 +1,31 @@
+<!doctype html>
+<html ng-app="demo">
+	<head>
+		<title>Hello AngularJS</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+    	<script src="hello.js"></script>
+	</head>
+
+	<body>
+		<div ng-controller="Hello">
+			<!-- <p>The title is {{greeting.title}}</p>
+			<p>The director is {{greeting.director}}</p>
+			<p>The releaseDate is {{greeting.releaseDate}}</p>
+			<p>The type is {{greeting.type}}</p> -->
+			  <p style="font-size:28px;">Enter Movie Title:<input type="text" ng-model="movie.title"/> </p>
+			  <p style="font-size:28px;">Enter Movie Director:<input type="text" ng-model="movie.director"/> </p>
+			  <p style="font-size:28px;">Enter Movie ReleaseDate:<input type="text" ng-model="movie.releaseDate"/> </p>
+			  <p style="font-size:28px;">Enter Movie Type:<input type="text" ng-model="movie.type"/> </p>
+			  <button ng-click="updateMovies(movie)">Add</button>
+			  
+			 <button ng-click="getMovie()">Search Movie</button>  
+			<ul ng-repeat="movie in movies">
+			<li>MovieName:{{movie.title}}</li>
+			<li>Director:{{movie.director}}</li>
+			<li>ReleaseDate{{movie.releaseDate}}</li>
+			<li>Type:{{movie.type}}</li>
+			
+			</ul>			
+		</div>
+	</body>
+</html>
